@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-flow: column;
+            width: 270px;
+            box-shadow: 10px 10px 10px 10px gray;
+            padding:20px;
+            border-radius: 10px;
+        }
+        form div {
+            margin-top: 10px;
+            display: flex;
+            justify-content:flex-end;
+        }
+        form h2 {
+            text-align: center;
+        }
+        form div input {
+            margin-left: 20px;
+        }
+        form div select {
+            margin-left: 20px;
+        }
+        .form-button-container{
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="signupForm">
+        <h2>Signup Form</h2>
+        <div>
+            <label for="full_name">Full Name</label>
+            <input type="text" name="full_name" id="full_name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" id="phone">
+        </div>
+        <div>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="other" value="other">
+            <label for="other">Other</label>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <select name="age" id="age">
+                <option value="0">Select Age</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+        <div class="form-button-container">
+            <button type="submit" id="submitBtn" disabled>SUBMIT</button>
+        </div>
+    </form>
+    <script src="./form-events-extensive.js"></script>
+</body>
+</html>
