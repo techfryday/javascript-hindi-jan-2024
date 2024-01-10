@@ -7,6 +7,29 @@ let ageSelector = document.getElementById("age")
 let formSelector = document.getElementById("signupForm")
 let submitBtn = document.getElementById("submitBtn")
 
+emailSelector.addEventListener("focus", function(){
+    console.log("Email textbox is focused")
+})
+
+emailSelector.addEventListener("blur", function(e){
+    if(e.target.value.length==0){
+        alert("Email Cannot be blank")
+    }
+})
+
+emailSelector.addEventListener("change", function(e){
+    let emailString = e.target.value
+    if(String(emailString).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
+    {
+        submitBtn.disabled = false
+        console.log("Valid Email")
+    }
+    else{
+        submitBtn.disabled = true
+        console.log("Invalid Email")
+    }
+})
+
 emailSelector.addEventListener("keyup", function(e){
     let emailString = e.target.value
     if(String(emailString).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
