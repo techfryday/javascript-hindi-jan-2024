@@ -1,0 +1,28 @@
+#root {
+    min-height: 50px;
+    min-width: 50px;
+    max-height: 500px;
+    max-width: 500px;
+    border: solid magenta 5px;
+    transition: 1s;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.rectangle{
+    width: 200px;
+    height: 50px;
+}
+
+.square{
+    width: 50px;
+    height: 50px;
+}
+
+.shadow{
+    box-shadow: 5px 5px 5px 5px rgb(106, 106, 106);
+}
